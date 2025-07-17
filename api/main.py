@@ -13,8 +13,8 @@ def read_root():
 # Rota dinâmica (GET)
 @app.get("/livros/{id_livro}/")
 def dados_livro(id_livro: int):
-    #df = pd.read_csv('https://raw.githubusercontent.com/diegodio/entrelinhasapi/refs/heads/main/db_livros.csv?token=GHSAT0AAAAAADHNQBSHZNQX7EPA2VWPL5HE2DZF2FQ')
-    df = pd.read_csv('db_livros.csv', encoding='utf-8')
+    df = pd.read_csv('https://raw.githubusercontent.com/entrelinhasapp/entrelinhasapi/refs/heads/main/db_livros.csv')
+    #df = pd.read_csv('db_livros.csv', encoding='utf-8')
 
     df = df[df['ID livro'] == id_livro]
 
